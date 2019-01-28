@@ -49,6 +49,7 @@ links[3].textContent = siteContent.nav['nav-item-4'];
 links[4].textContent = siteContent.nav['nav-item-5'];
 links[5].textContent = siteContent.nav['nav-item-6'];
 
+
 let icd = document.querySelector('h1');
 icd.textContent = siteContent.cta['h1'];
 
@@ -79,3 +80,6 @@ allP[8].textContent = siteContent.footer['copyright'];
 
 let middle_pic = document.getElementById('middle-img');
 middle_pic.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+
+links.forEach (a => a.style.color = "green");
