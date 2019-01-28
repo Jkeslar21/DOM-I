@@ -96,3 +96,9 @@ navBar.prepend(navItemFirst);
 
 newNavItem.style.color = 'green';
 navItemFirst.style.color = 'green';
+
+// Stretch
+btn.style.backgroundColor = 'grey';
+allH4.forEach(h4 => h4.style.color = 'purple');
+allP.forEach(p => p.style.color = 'lightblue');
+icd.style.color = '#000033'
