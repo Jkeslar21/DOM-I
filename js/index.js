@@ -83,3 +83,16 @@ middle_pic.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
 
 links.forEach (a => a.style.color = "green");
+
+let newNavItem = document.createElement('a');
+newNavItem.textContent = 'Community';
+
+let navItemFirst = document.createElement('a');
+navItemFirst.textContent = 'Home';
+
+let navBar = document.querySelector('nav');
+navBar.appendChild(newNavItem);
+navBar.prepend(navItemFirst);
+
+newNavItem.style.color = 'green';
+navItemFirst.style.color = 'green';
