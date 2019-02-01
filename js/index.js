@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM <br> Is <br> Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -40,3 +40,65 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let links = document.querySelectorAll('a');
+links[0].textContent = siteContent.nav['nav-item-1'];
+links[1].textContent = siteContent.nav['nav-item-2'];
+links[2].textContent = siteContent.nav['nav-item-3'];
+links[3].textContent = siteContent.nav['nav-item-4'];
+links[4].textContent = siteContent.nav['nav-item-5'];
+links[5].textContent = siteContent.nav['nav-item-6'];
+
+
+let icd = document.querySelector('h1');
+icd.innerHTML = siteContent.cta['h1'];
+
+let btn = document.querySelector('button');
+btn.textContent = siteContent.cta['button']
+
+let icd_pic = document.getElementById('cta-img');
+icd_pic.setAttribute('src', siteContent['cta']['img-src']);
+
+let allH4 = document.querySelectorAll('h4');
+allH4[0].textContent = siteContent["main-content"]["features-h4"];
+allH4[1].textContent = siteContent["main-content"]["about-h4"];
+allH4[2].textContent = siteContent["main-content"]["services-h4"];
+allH4[3].textContent = siteContent["main-content"]["product-h4"];
+allH4[4].textContent = siteContent["main-content"]["vision-h4"];
+allH4[5].textContent = siteContent.contact['contact-h4'];
+
+let allP = document.querySelectorAll('p');
+allP[0].textContent = siteContent["main-content"]["features-content"];
+allP[1].textContent = siteContent["main-content"]["about-content"];
+allP[2].textContent = siteContent["main-content"]["services-content"];
+allP[3].textContent = siteContent["main-content"]["product-content"];
+allP[4].textContent = siteContent["main-content"]["vision-content"];
+allP[5].textContent = siteContent.contact['address'];
+allP[6].textContent = siteContent.contact['phone'];
+allP[7].textContent = siteContent.contact['email'];
+allP[8].textContent = siteContent.footer['copyright'];
+
+let middle_pic = document.getElementById('middle-img');
+middle_pic.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+
+links.forEach (a => a.style.color = "green");
+
+let newNavItem = document.createElement('a');
+newNavItem.textContent = 'Community';
+
+let navItemFirst = document.createElement('a');
+navItemFirst.textContent = 'Home';
+
+let navBar = document.querySelector('nav');
+navBar.appendChild(newNavItem);
+navBar.prepend(navItemFirst);
+
+newNavItem.style.color = 'green';
+navItemFirst.style.color = 'green';
+
+// Stretch
+btn.style.backgroundColor = 'grey';
+allH4.forEach(h4 => h4.style.color = 'purple');
+allP.forEach(p => p.style.color = 'lightblue');
+icd.style.color = '#000033'
